@@ -28,7 +28,8 @@ endfunction
 
 function! s:open(cmd, context)
   let [ l:location, l:directory ] = a:context
-  execute a:cmd . ' ' . contabs#location#entrypoint(l:location, l:directory)
+  " execute a:cmd . ' ' . contabs#location#entrypoint(l:location, l:directory)
+  echo 'switched to "' . l:directory . '"'
   execute "tcd" l:directory
 endfunction
 

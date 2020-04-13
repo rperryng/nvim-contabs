@@ -50,3 +50,7 @@ function! contabs#project#select()
   return contabs#window#open(
   \ 'projects', s:all_projects(), funcref('s:open'), l:actions)
 endfunction
+
+function! contabs#project#paths()
+  return s:all_projects()
+endfunction
